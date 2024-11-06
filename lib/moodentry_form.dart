@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// TODO: Impor drawer yang sudah dibuat sebelumnya
 import 'package:mental_health_tracker/widgets/left_drawer.dart';
 
 class MoodEntryFormPage extends StatefulWidget {
@@ -26,8 +25,7 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
       ),
-      // TODO: Tambahkan drawer yang sudah dibuat di sini
-
+      drawer: const LeftDrawer(),
       body: Form(
         key: _formKey,
         child: SingleChildScrollView(
@@ -127,7 +125,8 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text('Mood: $_mood'),
-                                    // TODO: Munculkan value-value lainnya
+                                    Text('Feelings: $_feelings'),
+                                    Text('Mood Intesity: $_moodIntensity')
                                   ],
                                 ),
                               ),
